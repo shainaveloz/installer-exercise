@@ -14,6 +14,7 @@ function outputString(installer) {
         var outputArray = installer[i].trim().split(':');
         var packageName = outputArray[0].trim();
         var dependencyName = outputArray[1].trim();
+
         if(outputArray.length > 1 && dependencyName === '') {
 
             if(output.indexOf(packageName) === -1) {

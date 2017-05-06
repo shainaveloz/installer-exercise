@@ -9,11 +9,9 @@ var installer = [
 
 var output = [];
 
-console.log(typeof installer);
-
 function outputString(installer) {
     for(var i = 0; i < installer.length; i++) {
-        var outputArray = installer.trim().split(':');
+        var outputArray = installer[i].trim().split(':');
         var packageName = outputArray[0].trim();
         var dependencyName = outputArray[1].trim();
         if(outputArray.length > 1 && dependencyName === '') {
@@ -35,6 +33,10 @@ function outputString(installer) {
         }
     }
     return output;
+}
+
+function buttonClick(){
+    document.getElementById('outputDependencies').innerHTML = outputString(installer);
 }
 
 console.log(outputString(installer));

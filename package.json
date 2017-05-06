@@ -4,6 +4,7 @@
   "description": "A package installer that can handle dependencies",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon ./server.js localhost 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,8 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

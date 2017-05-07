@@ -35,10 +35,10 @@ describe('index', function() {
             var dependencyName = ': dependency 1';
             var output = [
                 'dependency 1',
+                'package 1',
                 'dependency 2',
+                'package 2',
                 'dependency 3',
-                'dependency 4',
-                'dependency 5',
                 'dependency 6'
             ];
             assert.isArray(outputArray, 'outputArray are dependencies');

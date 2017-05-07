@@ -13,6 +13,7 @@ function outputString(installer) {
     for(var i = 0; i < installer.length; i++) {
         var outputArray = installer[i].trim().split(':');
         var packageName = outputArray[0].trim();
+        console.log(packageName);
         var dependencyName = outputArray[1].trim();
 
         if(outputArray.length > 1 && dependencyName === '') {

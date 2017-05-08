@@ -30,21 +30,19 @@ describe('index', function() {
 
     describe('outputString', function(){
         it('should populate outputArray', function(){
-            var outputArray = [1,2];
             var packageName = 'package 1:';
             var dependencyName = ': dependency 1';
+            var outputArray = [dependencyName,packageName];
             var output = [
-                'dependency 1',
-                'package 1',
-                'dependency 2',
-                'package 2',
-                'dependency 3',
-                'dependency 6'
+                dependencyName[0],
+                packageName[0],
+                dependencyName[1],
+                packageName[1],
+                dependencyName[2],
+                packageName[2]
             ];
             assert.isArray(outputArray, 'outputArray are dependencies');
             assert.equal(outputArray.length, 2);
-            assert.propertyVal({ dependencyName: 'packageName' }, 'dependencyName', 'packageName');
-            assert.typeOf(['dependency 1: package 1', 'dependency 2:package 2'], 'array', 'we have a new array');
             assert.equal(output.length, 6, 'array has length of 6');
         })
     })
